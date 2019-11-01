@@ -1,0 +1,10 @@
+C:\Users\ra1857083\Desktop\flexnit\flexnit\bin\Debug\flexnit.exe.config
+C:\Users\ra1857083\Desktop\flexnit\flexnit\bin\Debug\flexnit.exe
+C:\Users\ra1857083\Desktop\flexnit\flexnit\bin\Debug\flexnit.pdb
+C:\Users\ra1857083\Desktop\flexnit\flexnit\obj\Debug\flexnit.csprojAssemblyReference.cache
+C:\Users\ra1857083\Desktop\flexnit\flexnit\obj\Debug\flexnit.frmLogin.resources
+C:\Users\ra1857083\Desktop\flexnit\flexnit\obj\Debug\flexnit.Properties.Resources.resources
+C:\Users\ra1857083\Desktop\flexnit\flexnit\obj\Debug\flexnit.csproj.GenerateResource.cache
+C:\Users\ra1857083\Desktop\flexnit\flexnit\obj\Debug\flexnit.csproj.CoreCompileInputs.cache
+C:\Users\ra1857083\Desktop\flexnit\flexnit\obj\Debug\flexnit.exe
+C:\Users\ra1857083\Desktop\flexnit\flexnit\obj\Debug\flexnit.pdb
