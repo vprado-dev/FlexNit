@@ -66,9 +66,22 @@ namespace flexnit
         private void btnLogin_Click(object sender, EventArgs e)
         {
             //   MessageBox.Show("Aqui é o login!!!");
-            frmMenuAdmin formAdmin = new frmMenuAdmin();
-            this.Hide();
-            formAdmin.ShowDialog();
+            if(txtUsername.Text == "admin")
+            {
+                frmMenuAdmin formAdmin = new frmMenuAdmin();
+                this.Hide();
+                formAdmin.ShowDialog();
+            }
+            else if (!String.IsNullOrWhiteSpace(txtUsername.Text) && txtUsername.Text != "admin")
+            {
+                frmMenuUser formMenuUsuario = new frmMenuUser();
+                this.Hide();
+                formMenuUsuario.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Insira um usuário!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             this.Activate();
             this.Show();
         }
