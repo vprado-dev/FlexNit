@@ -16,5 +16,10 @@ namespace flexnit
         {
             InitializeComponent();
         }
+
+        private void btnCadCadastrar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
