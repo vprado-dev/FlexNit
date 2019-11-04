@@ -28,3 +28,5 @@ C:\Users\ra1857083.CTIBAURU\Desktop\FlexNit\flexnit\flexnit\obj\Debug\flexnit.cs
 C:\Users\ra1857083.CTIBAURU\Desktop\FlexNit\flexnit\flexnit\obj\Debug\flexnit.csproj.CoreCompileInputs.cache
 C:\Users\ra1857083.CTIBAURU\Desktop\FlexNit\flexnit\flexnit\obj\Debug\flexnit.exe
 C:\Users\ra1857083.CTIBAURU\Desktop\FlexNit\flexnit\flexnit\obj\Debug\flexnit.pdb
+C:\Users\ra1857083.CTIBAURU\Desktop\FlexNit\flexnit\flexnit\obj\Debug\flexnit.frmMenuAdmin.resources
+C:\Users\ra1857083.CTIBAURU\Desktop\FlexNit\flexnit\flexnit\obj\Debug\flexnit.frmMenuUser.resources

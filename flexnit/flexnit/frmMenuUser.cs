@@ -12,9 +12,34 @@ namespace flexnit
 {
     public partial class frmMenuUser : Form
     {
-        public frmMenuUser()
+        public frmMenuUser(string nomeUsuario)
         {
             InitializeComponent();
+            tssNomeUsuario.Text = nomeUsuario;
+        }
+
+        private void frmMenuUser_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void tssLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void lblSaida_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void lblSaida_MouseEnter(object sender, EventArgs e)
+        {
+            lblSaida.BackColor = Color.Firebrick;
+        }
+
+        private void lblSaida_MouseLeave(object sender, EventArgs e)
+        {
+            lblSaida.BackColor = Color.RosyBrown;
         }
     }
 }
