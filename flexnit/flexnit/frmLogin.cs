@@ -28,48 +28,68 @@ namespace flexnit
 
         private void pbxUsername_Click(object sender, EventArgs e)
         {
-            txtUsername.Focus();
+            txtLoginUsername.Focus();
         }
 
         private void pbxSenha_Click(object sender, EventArgs e)
         {
-            txtSenha.Focus();
+            txtLoginSenha.Focus();
         }
 
         private void txtUsername_Validating(object sender, CancelEventArgs e)
         {
-            if (String.IsNullOrEmpty(txtUsername.Text))
+            if (String.IsNullOrEmpty(txtLoginUsername.Text))
             {
-                txtUsername.Text = "Username";
+                txtLoginUsername.Text = "Username";
             }
         }
 
         private void txtUsername_Enter(object sender, EventArgs e)
         {
-            txtUsername.Text = "";
+            txtLoginUsername.Text = "";
         }
 
         private void txtSenha_Validating(object sender, CancelEventArgs e)
         {
-            if (String.IsNullOrEmpty(txtSenha.Text))
+            if (String.IsNullOrEmpty(txtLoginSenha.Text))
             {
-                txtSenha.PasswordChar -= '*';
-                txtSenha.Text = "Senha";
+                txtLoginSenha.PasswordChar -= '*';
+                txtLoginSenha.Text = "Senha";
             }
         }
 
         private void txtSenha_Enter(object sender, EventArgs e)
         {
-            txtSenha.Text = "";
-            txtSenha.PasswordChar = '*';
+            txtLoginSenha.Text = "";
+            txtLoginSenha.PasswordChar = '*';
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             string sqlLogin = "SELECT clientes(email_cliente, username_cliente, senha_cliente) WHERE login = @nomeUsuario";            //   MessageBox.Show("Aqui é o login!!!");
             frmMenuAdmin formAdmin = new frmMenuAdmin();
             this.Hide();
             formAdmin.ShowDialog();
+=======
+            //   MessageBox.Show("Aqui é o login!!!");
+            if(txtLoginUsername.Text == "admin")
+            {
+                frmMenuAdmin formAdmin = new frmMenuAdmin();
+                this.Hide();
+                formAdmin.ShowDialog();
+            }
+            else if (!String.IsNullOrWhiteSpace(txtLoginUsername.Text) && txtLoginUsername.Text != "admin")
+            {
+                frmMenuUser formMenuUsuario = new frmMenuUser(txtLoginUsername.Text);
+                this.Hide();
+                formMenuUsuario.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Insira um usuário!", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+>>>>>>> master
             this.Activate();
             this.Show();
         }
@@ -84,5 +104,18 @@ namespace flexnit
             this.Show();
         }
 
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult resp = MessageBox.Show("Deseja realmente sair?", "Saindo?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (resp == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }

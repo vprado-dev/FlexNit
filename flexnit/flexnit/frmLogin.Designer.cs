@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.txtLoginUsername = new System.Windows.Forms.TextBox();
+            this.txtLoginSenha = new System.Windows.Forms.TextBox();
             this.pbxSenha = new System.Windows.Forms.PictureBox();
             this.pbxUsername = new System.Windows.Forms.PictureBox();
             this.pbxLogin = new System.Windows.Forms.PictureBox();
@@ -47,6 +47,7 @@
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSenha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxUsername)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogin)).BeginInit();
@@ -57,33 +58,33 @@
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtUsername
+            // txtLoginUsername
             // 
-            this.txtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txtUsername.Location = new System.Drawing.Point(74, 211);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(329, 21);
-            this.txtUsername.TabIndex = 1;
-            this.txtUsername.Text = "Username";
-            this.txtUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
-            this.txtUsername.Validating += new System.ComponentModel.CancelEventHandler(this.txtUsername_Validating);
+            this.txtLoginUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.txtLoginUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtLoginUsername.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLoginUsername.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txtLoginUsername.Location = new System.Drawing.Point(74, 211);
+            this.txtLoginUsername.Name = "txtLoginUsername";
+            this.txtLoginUsername.Size = new System.Drawing.Size(329, 21);
+            this.txtLoginUsername.TabIndex = 1;
+            this.txtLoginUsername.Text = "Username";
+            this.txtLoginUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
+            this.txtLoginUsername.Validating += new System.ComponentModel.CancelEventHandler(this.txtUsername_Validating);
             // 
-            // txtSenha
+            // txtLoginSenha
             // 
-            this.txtSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSenha.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txtSenha.Location = new System.Drawing.Point(74, 264);
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(329, 21);
-            this.txtSenha.TabIndex = 2;
-            this.txtSenha.Text = "Senha";
-            this.txtSenha.Enter += new System.EventHandler(this.txtSenha_Enter);
-            this.txtSenha.Validating += new System.ComponentModel.CancelEventHandler(this.txtSenha_Validating);
+            this.txtLoginSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.txtLoginSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtLoginSenha.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLoginSenha.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txtLoginSenha.Location = new System.Drawing.Point(74, 264);
+            this.txtLoginSenha.Name = "txtLoginSenha";
+            this.txtLoginSenha.Size = new System.Drawing.Size(329, 21);
+            this.txtLoginSenha.TabIndex = 2;
+            this.txtLoginSenha.Text = "Senha";
+            this.txtLoginSenha.Enter += new System.EventHandler(this.txtSenha_Enter);
+            this.txtLoginSenha.Validating += new System.ComponentModel.CancelEventHandler(this.txtSenha_Validating);
             // 
             // pbxSenha
             // 
@@ -207,18 +208,21 @@
             this.logarToolStripMenuItem.Name = "logarToolStripMenuItem";
             this.logarToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.logarToolStripMenuItem.Text = "Login";
+            this.logarToolStripMenuItem.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // cadastrarToolStripMenuItem
             // 
             this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
             this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.cadastrarToolStripMenuItem.Text = "Cadastrar";
+            this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.sairToolStripMenuItem.Text = "Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnLogin
             // 
@@ -242,32 +246,49 @@
             this.btnCadastrar.Visible = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
+            // btnSair
+            // 
+            this.btnSair.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnSair.Location = new System.Drawing.Point(202, 414);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(75, 23);
+            this.btnSair.TabIndex = 12;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Visible = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // frmLogin
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.CancelButton = this.btnSair;
             this.ClientSize = new System.Drawing.Size(484, 461);
             this.ContextMenuStrip = this.contextMenuStrip1;
+            this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblCadastrar);
             this.Controls.Add(this.pbxCadastrar);
-            this.Controls.Add(this.txtSenha);
-            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.txtLoginSenha);
+            this.Controls.Add(this.txtLoginUsername);
             this.Controls.Add(this.pbxSenha);
             this.Controls.Add(this.pbxUsername);
             this.Controls.Add(this.pbxLogin);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pbxFundo);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
             this.TopMost = true;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogin_FormClosing);
             this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxSenha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxUsername)).EndInit();
@@ -288,8 +309,8 @@
         private System.Windows.Forms.PictureBox pbxLogin;
         private System.Windows.Forms.PictureBox pbxUsername;
         private System.Windows.Forms.PictureBox pbxSenha;
-        private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.TextBox txtSenha;
+        private System.Windows.Forms.TextBox txtLoginUsername;
+        private System.Windows.Forms.TextBox txtLoginSenha;
         private System.Windows.Forms.PictureBox pbxCadastrar;
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.Label lblCadastrar;
@@ -300,6 +321,7 @@
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Button btnSair;
     }
 }
 

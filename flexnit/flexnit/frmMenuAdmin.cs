@@ -16,5 +16,10 @@ namespace flexnit
         {
             InitializeComponent();
         }
+
+        private void frmMenuAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

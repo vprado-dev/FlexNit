@@ -96,6 +96,12 @@
     <Compile Include="frmMenuAdmin.Designer.cs">
       <DependentUpon>frmMenuAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMenuUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuUser.Designer.cs">
+      <DependentUpon>frmMenuUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmCadastro.resx">
@@ -103,6 +109,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuAdmin.resx">
+      <DependentUpon>frmMenuAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuUser.resx">
+      <DependentUpon>frmMenuUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
