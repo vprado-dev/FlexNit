@@ -18,6 +18,19 @@ C:\Trabalho\FlexNit\flexnit\flexnit\obj\Debug\flexnit.csproj.GenerateResource.ca
 C:\Trabalho\FlexNit\flexnit\flexnit\obj\Debug\flexnit.csproj.CoreCompileInputs.cache
 C:\Trabalho\FlexNit\flexnit\flexnit\obj\Debug\flexnit.exe
 C:\Trabalho\FlexNit\flexnit\flexnit\obj\Debug\flexnit.pdb
+<<<<<<< HEAD
+C:\Users\bicudo\Source\Repos\VinicinhuSZ\FlexNit\flexnit\flexnit\bin\Debug\flexnit.exe.config
+C:\Users\bicudo\Source\Repos\VinicinhuSZ\FlexNit\flexnit\flexnit\bin\Debug\flexnit.exe
+C:\Users\bicudo\Source\Repos\VinicinhuSZ\FlexNit\flexnit\flexnit\bin\Debug\flexnit.pdb
+C:\Users\bicudo\Source\Repos\VinicinhuSZ\FlexNit\flexnit\flexnit\obj\Debug\flexnit.csprojAssemblyReference.cache
+C:\Users\bicudo\Source\Repos\VinicinhuSZ\FlexNit\flexnit\flexnit\obj\Debug\flexnit.frmLogin.resources
+C:\Users\bicudo\Source\Repos\VinicinhuSZ\FlexNit\flexnit\flexnit\obj\Debug\flexnit.Properties.Resources.resources
+C:\Users\bicudo\Source\Repos\VinicinhuSZ\FlexNit\flexnit\flexnit\obj\Debug\flexnit.csproj.GenerateResource.cache
+C:\Users\bicudo\Source\Repos\VinicinhuSZ\FlexNit\flexnit\flexnit\obj\Debug\flexnit.csproj.CoreCompileInputs.cache
+C:\Users\bicudo\Source\Repos\VinicinhuSZ\FlexNit\flexnit\flexnit\obj\Debug\flexnit.exe
+C:\Users\bicudo\Source\Repos\VinicinhuSZ\FlexNit\flexnit\flexnit\obj\Debug\flexnit.pdb
+C:\Users\bicudo\Source\Repos\VinicinhuSZ\FlexNit\flexnit\flexnit\obj\Debug\flexnit.frmCadastro.resources
+=======
 C:\Users\ra1857083.CTIBAURU\Desktop\FlexNit\flexnit\flexnit\bin\Debug\flexnit.exe.config
 C:\Users\ra1857083.CTIBAURU\Desktop\FlexNit\flexnit\flexnit\bin\Debug\flexnit.exe
 C:\Users\ra1857083.CTIBAURU\Desktop\FlexNit\flexnit\flexnit\bin\Debug\flexnit.pdb
@@ -30,3 +43,4 @@ C:\Users\ra1857083.CTIBAURU\Desktop\FlexNit\flexnit\flexnit\obj\Debug\flexnit.ex
 C:\Users\ra1857083.CTIBAURU\Desktop\FlexNit\flexnit\flexnit\obj\Debug\flexnit.pdb
 C:\Users\ra1857083.CTIBAURU\Desktop\FlexNit\flexnit\flexnit\obj\Debug\flexnit.frmMenuAdmin.resources
 C:\Users\ra1857083.CTIBAURU\Desktop\FlexNit\flexnit\flexnit\obj\Debug\flexnit.frmMenuUser.resources
+>>>>>>> master

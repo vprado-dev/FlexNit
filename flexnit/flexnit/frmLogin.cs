@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.IO;
+using flexnitClassControl;
 
 namespace flexnit
 {
@@ -65,6 +66,12 @@ namespace flexnit
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+            string sqlLogin = "SELECT clientes(email_cliente, username_cliente, senha_cliente) WHERE login = @nomeUsuario";            //   MessageBox.Show("Aqui é o login!!!");
+            frmMenuAdmin formAdmin = new frmMenuAdmin();
+            this.Hide();
+            formAdmin.ShowDialog();
+=======
             //   MessageBox.Show("Aqui é o login!!!");
             if(txtLoginUsername.Text == "admin")
             {
@@ -82,6 +89,7 @@ namespace flexnit
             {
                 MessageBox.Show("Insira um usuário!", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+>>>>>>> master
             this.Activate();
             this.Show();
         }
