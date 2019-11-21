@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -34,12 +35,12 @@ namespace flexnit
 
         private void lblSaida_MouseEnter(object sender, EventArgs e)
         {
-            lblSaida.BackColor = Color.Firebrick;
+            lblXis.BackColor = Color.Firebrick;
         }
 
         private void lblSaida_MouseLeave(object sender, EventArgs e)
         {
-            lblSaida.BackColor = Color.RosyBrown;
+            lblXis.BackColor = Color.RosyBrown;
         }
     }
 }
