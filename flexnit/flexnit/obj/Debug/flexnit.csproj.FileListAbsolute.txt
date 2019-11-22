@@ -259,3 +259,5 @@ C:\Trabalho\FlexNit\flexnit\flexnit\obj\Debug\flexnit.csproj.CoreCompileInputs.c
 C:\Trabalho\FlexNit\flexnit\flexnit\obj\Debug\flexnit.csproj.CopyComplete
 C:\Trabalho\FlexNit\flexnit\flexnit\obj\Debug\flexnit.exe
 C:\Trabalho\FlexNit\flexnit\flexnit\obj\Debug\flexnit.pdb
+C:\Trabalho\FlexNit\flexnit\flexnit\obj\Debug\flexnit.frmMinhaConta.resources
+C:\Trabalho\FlexNit\flexnit\flexnit\obj\Debug\flexnit.frmCatalogo.resources

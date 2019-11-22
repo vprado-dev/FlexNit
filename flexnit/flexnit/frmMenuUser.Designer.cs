@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuUser));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tssNomeUsuario = new System.Windows.Forms.ToolStripStatusLabel();
@@ -45,7 +46,10 @@
             this.pic2 = new System.Windows.Forms.PictureBox();
             this.pic1 = new System.Windows.Forms.PictureBox();
             this.picFlexnit = new System.Windows.Forms.PictureBox();
-            this.btnHistorico = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.minhaContaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.catálogoCompletoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.gpbFilmes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -54,6 +58,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFlexnit)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -133,8 +138,9 @@
             this.btnDadosCadastrados.Name = "btnDadosCadastrados";
             this.btnDadosCadastrados.Size = new System.Drawing.Size(205, 42);
             this.btnDadosCadastrados.TabIndex = 2;
-            this.btnDadosCadastrados.Text = "Ver dados cadastrados";
+            this.btnDadosCadastrados.Text = "Minha conta";
             this.btnDadosCadastrados.UseVisualStyleBackColor = false;
+            this.btnDadosCadastrados.Click += new System.EventHandler(this.btnDadosCadastrados_Click);
             // 
             // btnTodas
             // 
@@ -144,12 +150,13 @@
             this.btnTodas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTodas.Font = new System.Drawing.Font("Noto Sans", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnTodas.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnTodas.Location = new System.Drawing.Point(543, 356);
+            this.btnTodas.Location = new System.Drawing.Point(422, 356);
             this.btnTodas.Name = "btnTodas";
-            this.btnTodas.Size = new System.Drawing.Size(235, 42);
+            this.btnTodas.Size = new System.Drawing.Size(356, 42);
             this.btnTodas.TabIndex = 5;
             this.btnTodas.Text = "Catálogo completo";
             this.btnTodas.UseVisualStyleBackColor = false;
+            this.btnTodas.Click += new System.EventHandler(this.btnCatalogo_Click);
             // 
             // gpbFilmes
             // 
@@ -158,17 +165,20 @@
             this.gpbFilmes.Controls.Add(this.pic3);
             this.gpbFilmes.Controls.Add(this.pic2);
             this.gpbFilmes.Controls.Add(this.pic1);
-            this.gpbFilmes.Location = new System.Drawing.Point(12, 74);
+            this.gpbFilmes.Font = new System.Drawing.Font("Noto Sans", 12F);
+            this.gpbFilmes.ForeColor = System.Drawing.Color.White;
+            this.gpbFilmes.Location = new System.Drawing.Point(12, 86);
             this.gpbFilmes.Name = "gpbFilmes";
-            this.gpbFilmes.Size = new System.Drawing.Size(776, 245);
+            this.gpbFilmes.Size = new System.Drawing.Size(776, 249);
             this.gpbFilmes.TabIndex = 6;
             this.gpbFilmes.TabStop = false;
+            this.gpbFilmes.Text = "Filmes em destaque:  ";
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(619, 20);
+            this.pictureBox1.Location = new System.Drawing.Point(619, 27);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(147, 211);
             this.pictureBox1.TabIndex = 4;
@@ -178,7 +188,7 @@
             // 
             this.pic4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic4.BackgroundImage")));
             this.pic4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic4.Location = new System.Drawing.Point(467, 20);
+            this.pic4.Location = new System.Drawing.Point(467, 27);
             this.pic4.Name = "pic4";
             this.pic4.Size = new System.Drawing.Size(147, 211);
             this.pic4.TabIndex = 3;
@@ -188,7 +198,7 @@
             // 
             this.pic3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic3.BackgroundImage")));
             this.pic3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic3.Location = new System.Drawing.Point(315, 20);
+            this.pic3.Location = new System.Drawing.Point(315, 27);
             this.pic3.Name = "pic3";
             this.pic3.Size = new System.Drawing.Size(147, 211);
             this.pic3.TabIndex = 2;
@@ -198,7 +208,7 @@
             // 
             this.pic2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic2.BackgroundImage")));
             this.pic2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic2.Location = new System.Drawing.Point(163, 20);
+            this.pic2.Location = new System.Drawing.Point(163, 27);
             this.pic2.Name = "pic2";
             this.pic2.Size = new System.Drawing.Size(147, 211);
             this.pic2.TabIndex = 1;
@@ -208,7 +218,7 @@
             // 
             this.pic1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic1.BackgroundImage")));
             this.pic1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pic1.Location = new System.Drawing.Point(11, 20);
+            this.pic1.Location = new System.Drawing.Point(11, 27);
             this.pic1.Name = "pic1";
             this.pic1.Size = new System.Drawing.Size(147, 211);
             this.pic1.TabIndex = 0;
@@ -218,26 +228,41 @@
             // 
             this.picFlexnit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picFlexnit.BackgroundImage")));
             this.picFlexnit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picFlexnit.Location = new System.Drawing.Point(294, 9);
+            this.picFlexnit.Location = new System.Drawing.Point(306, 10);
             this.picFlexnit.Name = "picFlexnit";
             this.picFlexnit.Size = new System.Drawing.Size(216, 59);
             this.picFlexnit.TabIndex = 7;
             this.picFlexnit.TabStop = false;
             // 
-            // btnHistorico
+            // contextMenuStrip1
             // 
-            this.btnHistorico.BackColor = System.Drawing.Color.Firebrick;
-            this.btnHistorico.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHistorico.FlatAppearance.BorderSize = 0;
-            this.btnHistorico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistorico.Font = new System.Drawing.Font("Noto Sans", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnHistorico.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnHistorico.Location = new System.Drawing.Point(242, 356);
-            this.btnHistorico.Name = "btnHistorico";
-            this.btnHistorico.Size = new System.Drawing.Size(205, 42);
-            this.btnHistorico.TabIndex = 8;
-            this.btnHistorico.Text = "Histórico";
-            this.btnHistorico.UseVisualStyleBackColor = false;
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.minhaContaToolStripMenuItem,
+            this.catálogoCompletoToolStripMenuItem,
+            this.sairToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(177, 70);
+            // 
+            // minhaContaToolStripMenuItem
+            // 
+            this.minhaContaToolStripMenuItem.Name = "minhaContaToolStripMenuItem";
+            this.minhaContaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.minhaContaToolStripMenuItem.Text = "Minha conta";
+            this.minhaContaToolStripMenuItem.Click += new System.EventHandler(this.btnDadosCadastrados_Click);
+            // 
+            // catálogoCompletoToolStripMenuItem
+            // 
+            this.catálogoCompletoToolStripMenuItem.Name = "catálogoCompletoToolStripMenuItem";
+            this.catálogoCompletoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.catálogoCompletoToolStripMenuItem.Text = "Catálogo completo";
+            this.catálogoCompletoToolStripMenuItem.Click += new System.EventHandler(this.btnCatalogo_Click);
+            // 
+            // sairToolStripMenuItem
+            // 
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sairToolStripMenuItem.Text = "Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.lblSaida_Click);
             // 
             // frmMenuUser
             // 
@@ -245,7 +270,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnHistorico);
+            this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.picFlexnit);
             this.Controls.Add(this.gpbFilmes);
             this.Controls.Add(this.btnTodas);
@@ -268,6 +293,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFlexnit)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,6 +317,9 @@
         private System.Windows.Forms.PictureBox pic1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox picFlexnit;
-        private System.Windows.Forms.Button btnHistorico;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem minhaContaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem catálogoCompletoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
     }
 }

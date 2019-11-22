@@ -31,12 +31,13 @@ namespace flexnit
             txtLoginUsername.Focus();
         }
 
-        private void pbxSenha_Click(object sender, EventArgs e)
+        private void txtLoginUsername_Enter(object sender, EventArgs e)
         {
-            txtLoginSenha.Focus();
+            if(txtLoginUsername.Text == "Username")
+                txtLoginUsername.Text = "";
         }
 
-        private void txtUsername_Validating(object sender, CancelEventArgs e)
+        private void txtLoginUsername_Leave(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(txtLoginUsername.Text))
             {
@@ -44,9 +45,18 @@ namespace flexnit
             }
         }
 
-        private void txtUsername_Enter(object sender, EventArgs e)
+        private void pbxSenha_Click(object sender, EventArgs e)
         {
-            txtLoginUsername.Text = "";
+            txtLoginSenha.Focus();
+        }
+
+        private void txtSenha_Enter(object sender, EventArgs e)
+        {
+            if(txtLoginSenha.Text == "Password")
+            {
+                txtLoginSenha.Text = "";
+                txtLoginSenha.PasswordChar = '*';
+            }
         }
 
         private void txtSenha_Validating(object sender, CancelEventArgs e)
@@ -54,14 +64,8 @@ namespace flexnit
             if (String.IsNullOrEmpty(txtLoginSenha.Text))
             {
                 txtLoginSenha.PasswordChar -= '*';
-                txtLoginSenha.Text = "Senha";
+                txtLoginSenha.Text = "Password";
             }
-        }
-
-        private void txtSenha_Enter(object sender, EventArgs e)
-        {
-            txtLoginSenha.Text = "";
-            txtLoginSenha.PasswordChar = '*';
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -86,7 +90,6 @@ namespace flexnit
             {
                 MessageBox.Show("Insira um usuário!", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
             this.Activate();
             this.Show();
         }
@@ -114,5 +117,6 @@ namespace flexnit
                 e.Cancel = true;
             }
         }
+
     }
 }
