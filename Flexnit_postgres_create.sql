@@ -1,7 +1,8 @@
-﻿DROP TABLE IF EXISTS "filmes" CASCADE;
+DROP TABLE IF EXISTS "filmes" CASCADE;
 DROP TABLE IF EXISTS "cliente" CASCADE;
 DROP TABLE IF EXISTS "genero" CASCADE;
 DROP TABLE IF EXISTS "filmes_assistidos" CASCADE;
+DROP TABLE IF EXISTS "admin" CASCADE;
 
 CREATE TABLE "filmes" (
 	"id_filme" INTEGER NOT NULL,
@@ -20,15 +21,23 @@ CREATE TABLE "genero" (
 
 );
 CREATE TABLE "cliente" (
-	"id_cliente" INTEGER NOT NULL UNIQUE,
+	"id_cliente" SERIAL NOT NULL UNIQUE,
 	"nome_cliente" varchar(100) NOT NULL,
 	"email_cliente" varchar(150) NOT NULL,
 	"username_cliente" varchar(100) NOT NULL,
-	"cidade_cliente" varchar(50) NOT NULL,
+	"estado_cliente" varchar(50) NOT NULL,
 	"senha_cliente" varchar(200) NOT NULL,
-	"admin" BOOLEAN NOT NULL DEFAULT 'false',
 	"excluido" BOOLEAN NOT NULL DEFAULT 'false',
 	CONSTRAINT "cliente_pk" PRIMARY KEY ("id_cliente")
+);
+CREATE TABLE "admin"(
+	"id_admin" SERIAL NOT NULL UNIQUE,
+	"nome_admin" CHARACTER VARYING(100) NOT NULL,
+	"user_admin" CHARACTER VARYING(100)NOT NULL,
+	"email_admin" CHARACTER VARYING(100) NOT NULL,
+	"senha_admin" CHARACTER VARYING(100)NOT NULL,
+	CONSTRAINT "admin_pk" PRIMARY KEY ("id_admin")
+	
 );
 CREATE TABLE "filmes_assistidos" (
 	"id_assistido" INTEGER NOT NULL UNIQUE,

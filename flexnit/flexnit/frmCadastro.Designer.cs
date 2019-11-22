@@ -41,7 +41,7 @@
             this.txtCadEmail = new System.Windows.Forms.TextBox();
             this.txtCadPwd = new System.Windows.Forms.TextBox();
             this.txtCadConfirmPwd = new System.Windows.Forms.TextBox();
-            this.cmbCadCidade = new System.Windows.Forms.ComboBox();
+            this.cmbCadEstado = new System.Windows.Forms.ComboBox();
             this.pbxCadastrar = new System.Windows.Forms.PictureBox();
             this.lblCadastrar = new System.Windows.Forms.Label();
             this.btnCadCadastrar = new System.Windows.Forms.Button();
@@ -191,16 +191,18 @@
             this.txtCadConfirmPwd.TabIndex = 15;
             this.txtCadConfirmPwd.Text = "Confirm Password";
             // 
-            // cmbCadCidade
+            // cmbCadEstado
             // 
-            this.cmbCadCidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.cmbCadCidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.cmbCadCidade.FormattingEnabled = true;
-            this.cmbCadCidade.Location = new System.Drawing.Point(78, 292);
-            this.cmbCadCidade.Name = "cmbCadCidade";
-            this.cmbCadCidade.Size = new System.Drawing.Size(329, 21);
-            this.cmbCadCidade.TabIndex = 16;
-            this.cmbCadCidade.Text = "Selecione a cidade";
+            this.cmbCadEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.cmbCadEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.cmbCadEstado.FormattingEnabled = true;
+            this.cmbCadEstado.Items.AddRange(new object[] {
+            "dale"});
+            this.cmbCadEstado.Location = new System.Drawing.Point(78, 292);
+            this.cmbCadEstado.Name = "cmbCadEstado";
+            this.cmbCadEstado.Size = new System.Drawing.Size(329, 21);
+            this.cmbCadEstado.TabIndex = 16;
+            this.cmbCadEstado.Text = "Selecione a cidade";
             // 
             // pbxCadastrar
             // 
@@ -248,7 +250,7 @@
             this.Controls.Add(this.btnCadCadastrar);
             this.Controls.Add(this.lblCadastrar);
             this.Controls.Add(this.pbxCadastrar);
-            this.Controls.Add(this.cmbCadCidade);
+            this.Controls.Add(this.cmbCadEstado);
             this.Controls.Add(this.txtCadConfirmPwd);
             this.Controls.Add(this.txtCadPwd);
             this.Controls.Add(this.txtCadEmail);
@@ -290,7 +292,7 @@
         private System.Windows.Forms.TextBox txtCadEmail;
         private System.Windows.Forms.TextBox txtCadPwd;
         private System.Windows.Forms.TextBox txtCadConfirmPwd;
-        private System.Windows.Forms.ComboBox cmbCadCidade;
+        private System.Windows.Forms.ComboBox cmbCadEstado;
         private System.Windows.Forms.PictureBox pbxCadastrar;
         private System.Windows.Forms.Label lblCadastrar;
         private System.Windows.Forms.Button btnCadCadastrar;
