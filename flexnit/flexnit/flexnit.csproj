@@ -84,6 +84,12 @@
     <Compile Include="frmCadastro.Designer.cs">
       <DependentUpon>frmCadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCatalogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCatalogo.Designer.cs">
+      <DependentUpon>frmCatalogo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,10 +108,19 @@
     <Compile Include="frmMenuUser.Designer.cs">
       <DependentUpon>frmMenuUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMinhaConta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMinhaConta.Designer.cs">
+      <DependentUpon>frmMinhaConta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmCadastro.resx">
       <DependentUpon>frmCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCatalogo.resx">
+      <DependentUpon>frmCatalogo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -115,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuUser.resx">
       <DependentUpon>frmMenuUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMinhaConta.resx">
+      <DependentUpon>frmMinhaConta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

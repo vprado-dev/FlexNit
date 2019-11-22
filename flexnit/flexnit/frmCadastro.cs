@@ -85,5 +85,119 @@ namespace flexnit
             }
 
         }
+
+        private void pbxCadNome_Click(object sender, EventArgs e)
+        {
+            txtCadNome.Focus();
+        }
+
+        private void txtCadNome_Enter(object sender, EventArgs e)
+        {
+            if (txtCadNome.Text == "Nome")
+                txtCadNome.Text = "";
+            else
+                txtCadNome.SelectAll();
+        }
+
+        private void txtCadNome_Leave(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(txtCadNome.Text))
+                txtCadNome.Text = "Nome";
+        }
+
+        private void pbxCadUsername_Click(object sender, EventArgs e)
+        {
+            txtCadUsername.Focus();
+        }
+
+        private void txtCadUsername_Enter(object sender, EventArgs e)
+        {
+            if (txtCadUsername.Text == "Username")
+                txtCadUsername.Text = "";
+            else
+                txtCadUsername.SelectAll();
+        }
+
+        private void txtCadUsername_Leave(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(txtCadUsername.Text))
+                txtCadUsername.Text = "Username";
+        }
+
+        private void pbxCadEmail_Click(object sender, EventArgs e)
+        {
+            txtCadEmail.Focus();
+        }
+
+        private void txtCadEmail_Enter(object sender, EventArgs e)
+        {
+            if (txtCadEmail.Text == "Email")
+                txtCadEmail.Text = "";
+            else
+                txtCadEmail.SelectAll();
+        }
+
+        private void txtCadEmail_Leave(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(txtCadEmail.Text))
+                txtCadEmail.Text = "Email";
+        }
+
+        private void pbxCadEstado_Click(object sender, EventArgs e)
+        {
+            cmbCadEstado.Focus();
+        }
+
+        private void pbxCadPassword_Click(object sender, EventArgs e)
+        {
+            txtCadPwd.Focus();
+        }
+
+        private void txtCadPwd_Enter(object sender, EventArgs e)
+        {
+            if (txtCadPwd.Text == "Password")
+            {
+                txtCadPwd.Text = "";
+                txtCadPwd.PasswordChar = '*';
+            }
+            else
+                txtCadPwd.SelectAll();
+        }
+
+        private void txtCadPwd_Leave(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(txtCadPwd.Text))
+            {
+                txtCadPwd.PasswordChar -= '*';
+                txtCadPwd.Text = "Password";
+            }
+            else
+                txtCadPwd.SelectAll();
+        }
+
+        private void pbxCadConfirmPassword_Click(object sender, EventArgs e)
+        {
+            txtCadEmail.Focus();
+        }
+
+        private void txtCadConfirmPwd_Enter(object sender, EventArgs e)
+        {
+            if (txtCadConfirmPwd.Text == "Confirm Password")
+            {
+                txtCadConfirmPwd.Text = "";
+                txtCadConfirmPwd.PasswordChar = '*';
+            }
+            else
+                txtCadConfirmPwd.SelectAll();
+        }
+
+        private void txtCadConfirmPwd_Leave(object sender, EventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(txtCadConfirmPwd.Text))
+            {
+                txtCadConfirmPwd.PasswordChar -= '*';
+                txtCadConfirmPwd.Text = "Confirm Password";
+            }
+        }
     }
 }

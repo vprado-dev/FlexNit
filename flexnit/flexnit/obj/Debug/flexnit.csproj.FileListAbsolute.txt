@@ -389,3 +389,5 @@ C:\Users\vinicinhu\Source\Repos\VinicinhuSZ\FlexNit\flexnit\flexnit\bin\Debug\Sy
 C:\Users\vinicinhu\Source\Repos\VinicinhuSZ\FlexNit\flexnit\flexnit\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\vinicinhu\Source\Repos\VinicinhuSZ\FlexNit\flexnit\flexnit\bin\Debug\System.ValueTuple.xml
 C:\Users\vinicinhu\Source\Repos\VinicinhuSZ\FlexNit\flexnit\flexnit\obj\Debug\flexnit.csproj.CopyComplete
+C:\Trabalho\FlexNit\flexnit\flexnit\obj\Debug\flexnit.frmMinhaConta.resources
+C:\Trabalho\FlexNit\flexnit\flexnit\obj\Debug\flexnit.frmCatalogo.resources
