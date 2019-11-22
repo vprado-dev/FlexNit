@@ -45,7 +45,6 @@
             this.pic2 = new System.Windows.Forms.PictureBox();
             this.pic1 = new System.Windows.Forms.PictureBox();
             this.picFlexnit = new System.Windows.Forms.PictureBox();
-            this.btnHistorico = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.gpbFilmes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -133,8 +132,9 @@
             this.btnDadosCadastrados.Name = "btnDadosCadastrados";
             this.btnDadosCadastrados.Size = new System.Drawing.Size(205, 42);
             this.btnDadosCadastrados.TabIndex = 2;
-            this.btnDadosCadastrados.Text = "Ver dados cadastrados";
+            this.btnDadosCadastrados.Text = "MinhaConta";
             this.btnDadosCadastrados.UseVisualStyleBackColor = false;
+            this.btnDadosCadastrados.Click += new System.EventHandler(this.btnDadosCadastrados_Click);
             // 
             // btnTodas
             // 
@@ -144,12 +144,13 @@
             this.btnTodas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTodas.Font = new System.Drawing.Font("Noto Sans", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnTodas.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnTodas.Location = new System.Drawing.Point(543, 356);
+            this.btnTodas.Location = new System.Drawing.Point(420, 356);
             this.btnTodas.Name = "btnTodas";
-            this.btnTodas.Size = new System.Drawing.Size(235, 42);
+            this.btnTodas.Size = new System.Drawing.Size(358, 42);
             this.btnTodas.TabIndex = 5;
             this.btnTodas.Text = "Catálogo completo";
             this.btnTodas.UseVisualStyleBackColor = false;
+            this.btnTodas.Click += new System.EventHandler(this.btnTodas_Click);
             // 
             // gpbFilmes
             // 
@@ -224,28 +225,12 @@
             this.picFlexnit.TabIndex = 7;
             this.picFlexnit.TabStop = false;
             // 
-            // btnHistorico
-            // 
-            this.btnHistorico.BackColor = System.Drawing.Color.Firebrick;
-            this.btnHistorico.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHistorico.FlatAppearance.BorderSize = 0;
-            this.btnHistorico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistorico.Font = new System.Drawing.Font("Noto Sans", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btnHistorico.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnHistorico.Location = new System.Drawing.Point(242, 356);
-            this.btnHistorico.Name = "btnHistorico";
-            this.btnHistorico.Size = new System.Drawing.Size(205, 42);
-            this.btnHistorico.TabIndex = 8;
-            this.btnHistorico.Text = "Histórico";
-            this.btnHistorico.UseVisualStyleBackColor = false;
-            // 
             // frmMenuUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnHistorico);
             this.Controls.Add(this.picFlexnit);
             this.Controls.Add(this.gpbFilmes);
             this.Controls.Add(this.btnTodas);
@@ -291,6 +276,5 @@
         private System.Windows.Forms.PictureBox pic1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox picFlexnit;
-        private System.Windows.Forms.Button btnHistorico;
     }
 }

@@ -87,7 +87,9 @@ namespace flexnit
                 {
                     MessageBox.Show("Login efetuado com sucesso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
-                    formMenuUsuario.Show();
+                    formMenuUsuario.ShowDialog();
+                    this.Activate();
+                    this.Show();
                 }
                 else
                 {

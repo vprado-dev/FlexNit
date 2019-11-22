@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastro));
             this.pbxFundo = new System.Windows.Forms.PictureBox();
-            this.pbxUsername = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pbxCadUsername = new System.Windows.Forms.PictureBox();
+            this.pbxCadEmail = new System.Windows.Forms.PictureBox();
+            this.pbxCadNome = new System.Windows.Forms.PictureBox();
+            this.pbxCadEstado = new System.Windows.Forms.PictureBox();
+            this.pbxCadPassword = new System.Windows.Forms.PictureBox();
+            this.pbxCadConfirmPassword = new System.Windows.Forms.PictureBox();
             this.txtCadNome = new System.Windows.Forms.TextBox();
             this.txtCadUsername = new System.Windows.Forms.TextBox();
             this.txtCadEmail = new System.Windows.Forms.TextBox();
@@ -46,12 +46,12 @@
             this.lblCadastrar = new System.Windows.Forms.Label();
             this.btnCadCadastrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxFundo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxUsername)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCadUsername)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCadEmail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCadNome)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCadEstado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCadPassword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCadConfirmPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCadastrar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,71 +65,77 @@
             this.pbxFundo.TabIndex = 1;
             this.pbxFundo.TabStop = false;
             // 
-            // pbxUsername
+            // pbxCadUsername
             // 
-            this.pbxUsername.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pbxUsername.BackgroundImage = global::flexnit.Properties.Resources.caixa_login2;
-            this.pbxUsername.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbxUsername.Location = new System.Drawing.Point(66, 146);
-            this.pbxUsername.Name = "pbxUsername";
-            this.pbxUsername.Size = new System.Drawing.Size(352, 46);
-            this.pbxUsername.TabIndex = 4;
-            this.pbxUsername.TabStop = false;
+            this.pbxCadUsername.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pbxCadUsername.BackgroundImage = global::flexnit.Properties.Resources.caixa_login2;
+            this.pbxCadUsername.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxCadUsername.Location = new System.Drawing.Point(66, 146);
+            this.pbxCadUsername.Name = "pbxCadUsername";
+            this.pbxCadUsername.Size = new System.Drawing.Size(352, 46);
+            this.pbxCadUsername.TabIndex = 4;
+            this.pbxCadUsername.TabStop = false;
+            this.pbxCadUsername.Click += new System.EventHandler(this.pbxCadUsername_Click);
             // 
-            // pictureBox1
+            // pbxCadEmail
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox1.BackgroundImage = global::flexnit.Properties.Resources.caixa_login2;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(66, 212);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(352, 46);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.pbxCadEmail.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pbxCadEmail.BackgroundImage = global::flexnit.Properties.Resources.caixa_login2;
+            this.pbxCadEmail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxCadEmail.Location = new System.Drawing.Point(66, 212);
+            this.pbxCadEmail.Name = "pbxCadEmail";
+            this.pbxCadEmail.Size = new System.Drawing.Size(352, 46);
+            this.pbxCadEmail.TabIndex = 5;
+            this.pbxCadEmail.TabStop = false;
+            this.pbxCadEmail.Click += new System.EventHandler(this.pbxCadEmail_Click);
             // 
-            // pictureBox2
+            // pbxCadNome
             // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox2.BackgroundImage = global::flexnit.Properties.Resources.caixa_login2;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(66, 78);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(352, 46);
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
+            this.pbxCadNome.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pbxCadNome.BackgroundImage = global::flexnit.Properties.Resources.caixa_login2;
+            this.pbxCadNome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxCadNome.Location = new System.Drawing.Point(66, 78);
+            this.pbxCadNome.Name = "pbxCadNome";
+            this.pbxCadNome.Size = new System.Drawing.Size(352, 46);
+            this.pbxCadNome.TabIndex = 6;
+            this.pbxCadNome.TabStop = false;
+            this.pbxCadNome.Click += new System.EventHandler(this.pbxCadNome_Click);
             // 
-            // pictureBox3
+            // pbxCadEstado
             // 
-            this.pictureBox3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox3.BackgroundImage = global::flexnit.Properties.Resources.caixa_login2;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(66, 278);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(352, 46);
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
+            this.pbxCadEstado.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pbxCadEstado.BackgroundImage = global::flexnit.Properties.Resources.caixa_login2;
+            this.pbxCadEstado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxCadEstado.Location = new System.Drawing.Point(66, 278);
+            this.pbxCadEstado.Name = "pbxCadEstado";
+            this.pbxCadEstado.Size = new System.Drawing.Size(352, 46);
+            this.pbxCadEstado.TabIndex = 7;
+            this.pbxCadEstado.TabStop = false;
+            this.pbxCadEstado.Click += new System.EventHandler(this.pbxCadEstado_Click);
             // 
-            // pictureBox4
+            // pbxCadPassword
             // 
-            this.pictureBox4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox4.BackgroundImage = global::flexnit.Properties.Resources.caixa_login2;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox4.Location = new System.Drawing.Point(66, 337);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(352, 46);
-            this.pictureBox4.TabIndex = 8;
-            this.pictureBox4.TabStop = false;
+            this.pbxCadPassword.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pbxCadPassword.BackgroundImage = global::flexnit.Properties.Resources.caixa_login2;
+            this.pbxCadPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxCadPassword.Location = new System.Drawing.Point(66, 337);
+            this.pbxCadPassword.Name = "pbxCadPassword";
+            this.pbxCadPassword.Size = new System.Drawing.Size(352, 46);
+            this.pbxCadPassword.TabIndex = 8;
+            this.pbxCadPassword.TabStop = false;
+            this.pbxCadPassword.Click += new System.EventHandler(this.pbxCadPassword_Click);
             // 
-            // pictureBox5
+            // pbxCadConfirmPassword
             // 
-            this.pictureBox5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox5.BackgroundImage = global::flexnit.Properties.Resources.caixa_login2;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox5.Location = new System.Drawing.Point(66, 400);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(352, 46);
-            this.pictureBox5.TabIndex = 9;
-            this.pictureBox5.TabStop = false;
+            this.pbxCadConfirmPassword.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pbxCadConfirmPassword.BackgroundImage = global::flexnit.Properties.Resources.caixa_login2;
+            this.pbxCadConfirmPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxCadConfirmPassword.Location = new System.Drawing.Point(66, 400);
+            this.pbxCadConfirmPassword.Name = "pbxCadConfirmPassword";
+            this.pbxCadConfirmPassword.Size = new System.Drawing.Size(352, 46);
+            this.pbxCadConfirmPassword.TabIndex = 9;
+            this.pbxCadConfirmPassword.TabStop = false;
+            this.pbxCadConfirmPassword.Click += new System.EventHandler(this.pbxCadConfirmPassword_Click);
             // 
             // txtCadNome
             // 
@@ -137,11 +143,13 @@
             this.txtCadNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCadNome.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCadNome.ForeColor = System.Drawing.Color.Gainsboro;
-            this.txtCadNome.Location = new System.Drawing.Point(78, 89);
+            this.txtCadNome.Location = new System.Drawing.Point(78, 91);
             this.txtCadNome.Name = "txtCadNome";
             this.txtCadNome.Size = new System.Drawing.Size(329, 21);
             this.txtCadNome.TabIndex = 10;
             this.txtCadNome.Text = "Nome";
+            this.txtCadNome.Enter += new System.EventHandler(this.txtCadNome_Enter);
+            this.txtCadNome.Leave += new System.EventHandler(this.txtCadNome_Leave);
             // 
             // txtCadUsername
             // 
@@ -154,6 +162,8 @@
             this.txtCadUsername.Size = new System.Drawing.Size(329, 21);
             this.txtCadUsername.TabIndex = 11;
             this.txtCadUsername.Text = "Username";
+            this.txtCadUsername.Enter += new System.EventHandler(this.txtCadUsername_Enter);
+            this.txtCadUsername.Leave += new System.EventHandler(this.txtCadUsername_Leave);
             // 
             // txtCadEmail
             // 
@@ -166,6 +176,8 @@
             this.txtCadEmail.Size = new System.Drawing.Size(329, 21);
             this.txtCadEmail.TabIndex = 12;
             this.txtCadEmail.Text = "Email";
+            this.txtCadEmail.Enter += new System.EventHandler(this.txtCadEmail_Enter);
+            this.txtCadEmail.Leave += new System.EventHandler(this.txtCadEmail_Leave);
             // 
             // txtCadPwd
             // 
@@ -178,6 +190,8 @@
             this.txtCadPwd.Size = new System.Drawing.Size(329, 21);
             this.txtCadPwd.TabIndex = 14;
             this.txtCadPwd.Text = "Password";
+            this.txtCadPwd.Enter += new System.EventHandler(this.txtCadPwd_Enter);
+            this.txtCadPwd.Leave += new System.EventHandler(this.txtCadPwd_Leave);
             // 
             // txtCadConfirmPwd
             // 
@@ -190,19 +204,47 @@
             this.txtCadConfirmPwd.Size = new System.Drawing.Size(329, 21);
             this.txtCadConfirmPwd.TabIndex = 15;
             this.txtCadConfirmPwd.Text = "Confirm Password";
+            this.txtCadConfirmPwd.Enter += new System.EventHandler(this.txtCadConfirmPwd_Enter);
+            this.txtCadConfirmPwd.Leave += new System.EventHandler(this.txtCadConfirmPwd_Leave);
             // 
             // cmbCadEstado
             // 
             this.cmbCadEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.cmbCadEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.cmbCadEstado.FormattingEnabled = true;
+            this.cmbCadEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCadEstado.Font = new System.Drawing.Font("Noto Sans", 9.749999F);
+            this.cmbCadEstado.ForeColor = System.Drawing.Color.Gainsboro;
             this.cmbCadEstado.Items.AddRange(new object[] {
-            "dale"});
-            this.cmbCadEstado.Location = new System.Drawing.Point(78, 292);
+            "AC",
+            "AL",
+            "AP",
+            "AM",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MT",
+            "MS",
+            "MG",
+            "PA",
+            "PB",
+            "PR",
+            "PE",
+            "PI",
+            "RJ",
+            "RN",
+            "RS",
+            "RO",
+            "RR",
+            "SC",
+            "SP",
+            "SE",
+            "TO"});
+            this.cmbCadEstado.Location = new System.Drawing.Point(76, 288);
             this.cmbCadEstado.Name = "cmbCadEstado";
-            this.cmbCadEstado.Size = new System.Drawing.Size(329, 21);
-            this.cmbCadEstado.TabIndex = 16;
-            this.cmbCadEstado.Text = "Selecione a cidade";
+            this.cmbCadEstado.Size = new System.Drawing.Size(329, 26);
+            this.cmbCadEstado.TabIndex = 13;
             // 
             // pbxCadastrar
             // 
@@ -236,7 +278,7 @@
             this.btnCadCadastrar.Location = new System.Drawing.Point(2, 471);
             this.btnCadCadastrar.Name = "btnCadCadastrar";
             this.btnCadCadastrar.Size = new System.Drawing.Size(75, 23);
-            this.btnCadCadastrar.TabIndex = 19;
+            this.btnCadCadastrar.TabIndex = 16;
             this.btnCadCadastrar.Text = "Cadastrar";
             this.btnCadCadastrar.UseVisualStyleBackColor = true;
             this.btnCadCadastrar.Visible = false;
@@ -256,22 +298,24 @@
             this.Controls.Add(this.txtCadEmail);
             this.Controls.Add(this.txtCadUsername);
             this.Controls.Add(this.txtCadNome);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pbxUsername);
+            this.Controls.Add(this.pbxCadConfirmPassword);
+            this.Controls.Add(this.pbxCadPassword);
+            this.Controls.Add(this.pbxCadEstado);
+            this.Controls.Add(this.pbxCadNome);
+            this.Controls.Add(this.pbxCadEmail);
+            this.Controls.Add(this.pbxCadUsername);
             this.Controls.Add(this.pbxFundo);
+            this.MaximizeBox = false;
             this.Name = "frmCadastro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmCadastro";
             ((System.ComponentModel.ISupportInitialize)(this.pbxFundo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxUsername)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCadUsername)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCadEmail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCadNome)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCadEstado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCadPassword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCadConfirmPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCadastrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -281,12 +325,12 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pbxFundo;
-        private System.Windows.Forms.PictureBox pbxUsername;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pbxCadUsername;
+        private System.Windows.Forms.PictureBox pbxCadEmail;
+        private System.Windows.Forms.PictureBox pbxCadNome;
+        private System.Windows.Forms.PictureBox pbxCadEstado;
+        private System.Windows.Forms.PictureBox pbxCadPassword;
+        private System.Windows.Forms.PictureBox pbxCadConfirmPassword;
         private System.Windows.Forms.TextBox txtCadNome;
         private System.Windows.Forms.TextBox txtCadUsername;
         private System.Windows.Forms.TextBox txtCadEmail;
