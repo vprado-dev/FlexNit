@@ -9,12 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.IO;
-using flexnitClassControl;
+using Controle;
+using Npgsql;
+
 
 namespace flexnit
 {
     public partial class frmLogin : Form
     {
+
         public frmLogin()
         {
             InitializeComponent();
@@ -66,10 +69,41 @@ namespace flexnit
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            frmMenuUser formMenuUsuario = new frmMenuUser(txtLoginUsername.Text);
 
-            string sqlLogin = "SELECT clientes(email_cliente, username_cliente, senha_cliente) WHERE login = @nomeUsuario";            //   MessageBox.Show("Aqui é o login!!!");
+            NpgsqlCommand cmd = new NpgsqlCommand();
+            cmd.Parameters.AddWithValue("@EmailOrUser", txtLoginUsername.Text);
+            cmd.Parameters.AddWithValue("@LoginPwd", txtLoginSenha.Text);
+            try
+            {
+                ClassControl.conectar();
+                string sqlLogin = "SELECT * FROM cliente " +
+                "WHERE (email_cliente = @EmailOrUser OR username_cliente = @EmailOrUser) AND senha_cliente = @LoginPwd";
+                cmd.CommandText = sqlLogin;
+                cmd.Connection = ClassControl.cn;
+                NpgsqlDataReader dr = cmd.ExecuteReader();
+                bool logged = dr.HasRows;
+                if (logged)
+                {
+                    MessageBox.Show("Login efetuado com sucesso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+                    formMenuUsuario.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Credencias erradas ou usuário inesistente","Login Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                }
+            }
+            catch(NpgsqlException ex)
+            {
+                throw new ApplicationException(ex.Message);
+            }
+            finally
+            {
+                ClassControl.desconectar();
+            }
 
-            //   MessageBox.Show("Aqui é o login!!!");
+            /*  MessageBox.Show("Aqui é o login!!!");
             if(txtLoginUsername.Text == "admin")
             {
                 frmMenuAdmin formAdmin = new frmMenuAdmin();
@@ -86,9 +120,11 @@ namespace flexnit
             {
                 MessageBox.Show("Insira um usuário!", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
             this.Activate();
             this.Show();
+             */
+
+
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
