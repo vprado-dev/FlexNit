@@ -10,7 +10,6 @@ CREATE TABLE "filmes" (
 	"descricao_filme" varchar(255) NOT NULL,
 	"ano_filme" integer NOT NULL,
 	"id_genero" integer NOT NULL,
-	"id_cliente" integer NOT NULL,
 	CONSTRAINT "filmes_pk" PRIMARY KEY ("id_filme")
 );
 CREATE TABLE "genero" (
@@ -46,7 +45,6 @@ CREATE TABLE "filmes_assistidos" (
 	CONSTRAINT "filmes_assistidos_pk" PRIMARY KEY ("id_assistido")
 );
 ALTER TABLE "filmes" ADD CONSTRAINT "filmes_fk0" FOREIGN KEY ("id_genero") REFERENCES "genero"("id_genero");
-ALTER TABLE "filmes" ADD CONSTRAINT "filmes_fk1" FOREIGN KEY ("id_cliente") REFERENCES "cliente"("id_cliente");
 
 
 

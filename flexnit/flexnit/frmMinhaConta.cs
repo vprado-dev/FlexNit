@@ -14,40 +14,53 @@ namespace flexnit
 {
     public partial class frmMinhaConta : Form
     {
-        public frmMinhaConta(string username)
+        public frmMinhaConta()
         {
             InitializeComponent();
-            ClassControl.desconectar();
-            txtContaUsername.Text = username;
-            buscaSQL(username);
         }
         
-        private string buscaSQL(string username)
+        private void completaSQL()
         {
-            NpgsqlCommand cmd = new NpgsqlCommand();
-            cmd.Parameters.AddWithValue("@username", txtContaUsername.Text);
-            string sqlConta;
+            ClassControl.conectar();
             try
             {
-                ClassControl.conectar();
-                sqlConta = "SELECT nome_cliente, email_cliente, estado_cliente FROM cliente WHERE username_cliente = @username";
-                cmd.CommandText = sqlConta;
+                string sql = "SELECT c.nome_cliente,c.email_cliente,c.username_cliente, c.estado_cliente FROM cliente AS c";
+                NpgsqlCommand cmd = new NpgsqlCommand();
+                cmd.CommandText = sql;
                 cmd.Connection = ClassControl.cn;
-                NpgsqlDataReader dr = cmd.ExecuteReader();
-                dr.Read();
-                txtContaNome.Text = dr[0].ToString();
-                txtContaEmail.Text = dr[1].ToString();
-                txtContaEstado.Text = dr[2].ToString();
+                NpgsqlDataReader dr_myAccount = cmd.ExecuteReader();
+                if (dr_myAccount.Read())
+                {
+                    txtContaNome.Text = dr_myAccount[0].ToString();
+                    txtContaEmail.Text = dr_myAccount[1].ToString();
+                    txtContaUsername.Text = dr_myAccount[2].ToString();
+                    txtContaEstado.Text = dr_myAccount[3].ToString();
+                }
             }
-            catch (NpgsqlException ex)
+            catch(NpgsqlException Ex)
             {
-                throw new ApplicationException(ex.Message);
+                throw new ApplicationException(Ex.Message);
             }
             finally
             {
                 ClassControl.desconectar();
             }
-            return sqlConta;
+            
+            
+        }
+        /*private void carregaHist()
+        {
+            string sql = "SELECT h.nome_filme, h.username_cliente, FROM filmes_assistidos AS h, filmes AS f, cliente AS c WHERE h.id_cliente = c.id_cliente AND h.id_filme = f.id_filme ";
+            DataTable dt = new DataTable();
+
+            dt = ClassControl.selecionarDataTable(sql);
+
+            dtgHist.DataSource = dt;
+        }*/
+        private void frmMinhaConta_Load(object sender, EventArgs e)
+        {
+            completaSQL();
+            //carregaHist();
         }
     }
 }

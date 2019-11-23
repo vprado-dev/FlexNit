@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Npgsql;
+using Controle;
 namespace flexnit
 {
     public partial class frmMenuUser : Form
@@ -30,7 +31,7 @@ namespace flexnit
 
         private void lblSaida_Click(object sender, EventArgs e)
         {
-            this.Close();
+            tssLogout_Click(sender,e);
         }
 
         private void lblSaida_MouseEnter(object sender, EventArgs e)
@@ -45,7 +46,7 @@ namespace flexnit
 
         private void btnDadosCadastrados_Click(object sender, EventArgs e)
         {
-            frmMinhaConta formConta = new frmMinhaConta(tssNomeUsuario.Text);
+            frmMinhaConta formConta = new frmMinhaConta();
             formConta.ShowDialog();
         }
 

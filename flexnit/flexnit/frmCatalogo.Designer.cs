@@ -30,22 +30,22 @@
         {
             this.tbcCatalogo = new System.Windows.Forms.TabControl();
             this.tabTodos = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgFilmes = new System.Windows.Forms.DataGridView();
             this.tabPesquisaGen = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dtgFilmesGen = new System.Windows.Forms.DataGridView();
             this.cmbGeneros = new System.Windows.Forms.ComboBox();
             this.lblSelecGen = new System.Windows.Forms.Label();
             this.tabAno = new System.Windows.Forms.TabPage();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dtgFilmesAno = new System.Windows.Forms.DataGridView();
             this.txtSelecAno = new System.Windows.Forms.MaskedTextBox();
             this.lblSelecAno = new System.Windows.Forms.Label();
             this.tbcCatalogo.SuspendLayout();
             this.tabTodos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgFilmes)).BeginInit();
             this.tabPesquisaGen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgFilmesGen)).BeginInit();
             this.tabAno.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgFilmesAno)).BeginInit();
             this.SuspendLayout();
             // 
             // tbcCatalogo
@@ -61,7 +61,7 @@
             // 
             // tabTodos
             // 
-            this.tabTodos.Controls.Add(this.dataGridView1);
+            this.tabTodos.Controls.Add(this.dtgFilmes);
             this.tabTodos.Location = new System.Drawing.Point(4, 22);
             this.tabTodos.Name = "tabTodos";
             this.tabTodos.Padding = new System.Windows.Forms.Padding(3);
@@ -70,20 +70,20 @@
             this.tabTodos.Text = "Todos os filmes";
             this.tabTodos.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dtgFilmes
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 7);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(616, 335);
-            this.dataGridView1.TabIndex = 0;
+            this.dtgFilmes.AllowUserToAddRows = false;
+            this.dtgFilmes.AllowUserToDeleteRows = false;
+            this.dtgFilmes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgFilmes.Location = new System.Drawing.Point(7, 7);
+            this.dtgFilmes.Name = "dtgFilmes";
+            this.dtgFilmes.ReadOnly = true;
+            this.dtgFilmes.Size = new System.Drawing.Size(616, 335);
+            this.dtgFilmes.TabIndex = 0;
             // 
             // tabPesquisaGen
             // 
-            this.tabPesquisaGen.Controls.Add(this.dataGridView2);
+            this.tabPesquisaGen.Controls.Add(this.dtgFilmesGen);
             this.tabPesquisaGen.Controls.Add(this.cmbGeneros);
             this.tabPesquisaGen.Controls.Add(this.lblSelecGen);
             this.tabPesquisaGen.Location = new System.Drawing.Point(4, 22);
@@ -94,16 +94,16 @@
             this.tabPesquisaGen.Text = "Pesquisa por gênero";
             this.tabPesquisaGen.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // dtgFilmesGen
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(6, 69);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(616, 273);
-            this.dataGridView2.TabIndex = 2;
+            this.dtgFilmesGen.AllowUserToAddRows = false;
+            this.dtgFilmesGen.AllowUserToDeleteRows = false;
+            this.dtgFilmesGen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgFilmesGen.Location = new System.Drawing.Point(6, 69);
+            this.dtgFilmesGen.Name = "dtgFilmesGen";
+            this.dtgFilmesGen.ReadOnly = true;
+            this.dtgFilmesGen.Size = new System.Drawing.Size(616, 273);
+            this.dtgFilmesGen.TabIndex = 2;
             // 
             // cmbGeneros
             // 
@@ -114,6 +114,7 @@
             this.cmbGeneros.Name = "cmbGeneros";
             this.cmbGeneros.Size = new System.Drawing.Size(175, 26);
             this.cmbGeneros.TabIndex = 1;
+            this.cmbGeneros.Validating += new System.ComponentModel.CancelEventHandler(this.cmbGeneros_Validating);
             // 
             // lblSelecGen
             // 
@@ -128,7 +129,7 @@
             // 
             // tabAno
             // 
-            this.tabAno.Controls.Add(this.dataGridView3);
+            this.tabAno.Controls.Add(this.dtgFilmesAno);
             this.tabAno.Controls.Add(this.txtSelecAno);
             this.tabAno.Controls.Add(this.lblSelecAno);
             this.tabAno.Location = new System.Drawing.Point(4, 22);
@@ -139,16 +140,16 @@
             this.tabAno.Text = "Pesquisa por ano";
             this.tabAno.UseVisualStyleBackColor = true;
             // 
-            // dataGridView3
+            // dtgFilmesAno
             // 
-            this.dataGridView3.AllowUserToAddRows = false;
-            this.dataGridView3.AllowUserToDeleteRows = false;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(6, 69);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.ReadOnly = true;
-            this.dataGridView3.Size = new System.Drawing.Size(616, 273);
-            this.dataGridView3.TabIndex = 3;
+            this.dtgFilmesAno.AllowUserToAddRows = false;
+            this.dtgFilmesAno.AllowUserToDeleteRows = false;
+            this.dtgFilmesAno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgFilmesAno.Location = new System.Drawing.Point(6, 69);
+            this.dtgFilmesAno.Name = "dtgFilmesAno";
+            this.dtgFilmesAno.ReadOnly = true;
+            this.dtgFilmesAno.Size = new System.Drawing.Size(616, 273);
+            this.dtgFilmesAno.TabIndex = 3;
             // 
             // txtSelecAno
             // 
@@ -160,6 +161,7 @@
             this.txtSelecAno.TabIndex = 2;
             this.txtSelecAno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSelecAno.Click += new System.EventHandler(this.txtSelecAno_Click);
+            this.txtSelecAno.Validating += new System.ComponentModel.CancelEventHandler(this.txtSelecAno_Validating);
             // 
             // lblSelecAno
             // 
@@ -179,18 +181,22 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(661, 398);
             this.Controls.Add(this.tbcCatalogo);
-            this.ForeColor = System.Drawing.SystemColors.Control;
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmCatalogo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmCatalogo";
+            this.Load += new System.EventHandler(this.frmCatalogo_Load);
             this.tbcCatalogo.ResumeLayout(false);
             this.tabTodos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgFilmes)).EndInit();
             this.tabPesquisaGen.ResumeLayout(false);
             this.tabPesquisaGen.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgFilmesGen)).EndInit();
             this.tabAno.ResumeLayout(false);
             this.tabAno.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgFilmesAno)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -199,14 +205,14 @@
 
         private System.Windows.Forms.TabControl tbcCatalogo;
         private System.Windows.Forms.TabPage tabTodos;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgFilmes;
         private System.Windows.Forms.TabPage tabPesquisaGen;
         private System.Windows.Forms.ComboBox cmbGeneros;
         private System.Windows.Forms.Label lblSelecGen;
         private System.Windows.Forms.TabPage tabAno;
         private System.Windows.Forms.MaskedTextBox txtSelecAno;
         private System.Windows.Forms.Label lblSelecAno;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dtgFilmesGen;
+        private System.Windows.Forms.DataGridView dtgFilmesAno;
     }
 }
