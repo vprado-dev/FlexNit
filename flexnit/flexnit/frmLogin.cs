@@ -49,7 +49,12 @@ namespace flexnit
 
         private void txtUsername_Enter(object sender, EventArgs e)
         {
-            txtLoginUsername.Text = "";
+            if (txtLoginUsername.Text == "Username")
+            {
+                txtLoginUsername.Text = "";
+            }
+            else
+                txtLoginUsername.SelectAll();
         }
 
         private void txtSenha_Validating(object sender, CancelEventArgs e)
@@ -63,68 +68,68 @@ namespace flexnit
 
         private void txtSenha_Enter(object sender, EventArgs e)
         {
-            txtLoginSenha.Text = "";
-            txtLoginSenha.PasswordChar = '*';
+            if(txtLoginSenha.Text == "Senha")
+            {
+                txtLoginSenha.Text = "";
+                txtLoginSenha.PasswordChar = '*';
+            }
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            frmMenuUser formMenuUsuario = new frmMenuUser(txtLoginUsername.Text);
 
             NpgsqlCommand cmd = new NpgsqlCommand();
             cmd.Parameters.AddWithValue("@EmailOrUser", txtLoginUsername.Text);
             cmd.Parameters.AddWithValue("@LoginPwd", txtLoginSenha.Text);
+            
             try
             {
                 ClassControl.conectar();
-                string sqlLogin = "SELECT * FROM cliente " +
-                "WHERE (email_cliente = @EmailOrUser OR username_cliente = @EmailOrUser) AND senha_cliente = @LoginPwd";
+                string sqlLogin = "SELECT * FROM admin " +
+                    "WHERE (email_admin =  @EmailOrUser OR user_admin = @EmailOrUser) AND senha_admin = @LoginPwd";
                 cmd.CommandText = sqlLogin;
                 cmd.Connection = ClassControl.cn;
                 NpgsqlDataReader dr = cmd.ExecuteReader();
-                bool logged = dr.HasRows;
-                if (logged)
+                bool IsAdmin = dr.HasRows;
+                if (IsAdmin)
                 {
-                    MessageBox.Show("Login efetuado com sucesso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClassControl.desconectar();
                     this.Hide();
-                    formMenuUsuario.ShowDialog();
-                    this.Activate();
-                    this.Show();
+                    frmMenuAdmin formAdmin = new frmMenuAdmin();
+                    formAdmin.Show();
                 }
                 else
                 {
-                    MessageBox.Show("Credencias erradas ou usuário inesistente","Login Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    dr.Close();
+                    sqlLogin = "SELECT * FROM cliente " +
+                    "WHERE (email_cliente = @EmailOrUser OR username_cliente = @EmailOrUser) AND senha_cliente = @LoginPwd";
+                    cmd.CommandText = sqlLogin;
+                    cmd.Connection = ClassControl.cn;
+                    dr = cmd.ExecuteReader();
+                    bool logged = dr.HasRows;
+                    if (logged)
+                    {
+                        ClassControl.desconectar();
+                        MessageBox.Show("Login efetuado com sucesso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
+                        frmMenuUser formMenuUsuario = new frmMenuUser(txtLoginUsername.Text);
+                        formMenuUsuario.ShowDialog();
+                        this.Activate();
+                        this.Show();
+                    }
+                    else
+                    {
+                        if (txtLoginUsername.Text != "admin" && txtLoginSenha.Text != "admin")
+                            MessageBox.Show("Credencias erradas ou usuário inesistente", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            ClassControl.desconectar();
+                    }
                 }
+               
             }
             catch(NpgsqlException ex)
             {
                 throw new ApplicationException(ex.Message);
             }
-            finally
-            {
-                ClassControl.desconectar();
-            }
-
-            /*  MessageBox.Show("Aqui é o login!!!");
-            if(txtLoginUsername.Text == "admin")
-            {
-                frmMenuAdmin formAdmin = new frmMenuAdmin();
-                this.Hide();
-                formAdmin.ShowDialog();
-            }
-            else if (!String.IsNullOrWhiteSpace(txtLoginUsername.Text) && txtLoginUsername.Text != "admin")
-            {
-                frmMenuUser formMenuUsuario = new frmMenuUser(txtLoginUsername.Text);
-                this.Hide();
-                formMenuUsuario.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("Insira um usuário!", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            this.Activate();
-            this.Show();
-             */
 
 
         }
@@ -151,6 +156,11 @@ namespace flexnit
             {
                 e.Cancel = true;
             }
+        }
+
+        private void pbxFundo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

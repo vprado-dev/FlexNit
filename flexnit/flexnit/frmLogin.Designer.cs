@@ -139,6 +139,7 @@
             this.pbxFundo.Size = new System.Drawing.Size(837, 464);
             this.pbxFundo.TabIndex = 0;
             this.pbxFundo.TabStop = false;
+            this.pbxFundo.Click += new System.EventHandler(this.pbxFundo_Click);
             // 
             // pbxCadastrar
             // 

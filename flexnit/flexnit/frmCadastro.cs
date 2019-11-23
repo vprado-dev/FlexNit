@@ -199,5 +199,15 @@ namespace flexnit
                 txtCadConfirmPwd.Text = "Confirm Password";
             }
         }
+
+        private void lblCadSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pbxCadSair_Click(object sender, EventArgs e)
+        {
+            lblCadSair_Click(sender, e);
+        }
     }
 }

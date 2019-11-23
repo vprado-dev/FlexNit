@@ -45,6 +45,8 @@
             this.pbxCadastrar = new System.Windows.Forms.PictureBox();
             this.lblCadastrar = new System.Windows.Forms.Label();
             this.btnCadCadastrar = new System.Windows.Forms.Button();
+            this.lblCadSair = new System.Windows.Forms.Label();
+            this.pbxCadSair = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxFundo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCadUsername)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCadEmail)).BeginInit();
@@ -53,6 +55,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxCadPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCadConfirmPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCadastrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCadSair)).BeginInit();
             this.SuspendLayout();
             // 
             // pbxFundo
@@ -252,9 +255,9 @@
             this.pbxCadastrar.BackgroundImage = global::flexnit.Properties.Resources.button_vermelho;
             this.pbxCadastrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbxCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxCadastrar.Location = new System.Drawing.Point(66, 463);
+            this.pbxCadastrar.Location = new System.Drawing.Point(45, 461);
             this.pbxCadastrar.Name = "pbxCadastrar";
-            this.pbxCadastrar.Size = new System.Drawing.Size(352, 40);
+            this.pbxCadastrar.Size = new System.Drawing.Size(211, 40);
             this.pbxCadastrar.TabIndex = 17;
             this.pbxCadastrar.TabStop = false;
             this.pbxCadastrar.Click += new System.EventHandler(this.btnCadCadastrar_Click);
@@ -265,7 +268,7 @@
             this.lblCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCadastrar.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadastrar.ForeColor = System.Drawing.Color.Black;
-            this.lblCadastrar.Location = new System.Drawing.Point(189, 465);
+            this.lblCadastrar.Location = new System.Drawing.Point(98, 463);
             this.lblCadastrar.Name = "lblCadastrar";
             this.lblCadastrar.Size = new System.Drawing.Size(109, 37);
             this.lblCadastrar.TabIndex = 18;
@@ -284,11 +287,40 @@
             this.btnCadCadastrar.Visible = false;
             this.btnCadCadastrar.Click += new System.EventHandler(this.btnCadCadastrar_Click);
             // 
+            // lblCadSair
+            // 
+            this.lblCadSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(9)))), ((int)(((byte)(20)))));
+            this.lblCadSair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblCadSair.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadSair.ForeColor = System.Drawing.Color.Black;
+            this.lblCadSair.Location = new System.Drawing.Point(308, 464);
+            this.lblCadSair.Name = "lblCadSair";
+            this.lblCadSair.Size = new System.Drawing.Size(99, 37);
+            this.lblCadSair.TabIndex = 20;
+            this.lblCadSair.Text = "Sair";
+            this.lblCadSair.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCadSair.Click += new System.EventHandler(this.lblCadSair_Click);
+            // 
+            // pbxCadSair
+            // 
+            this.pbxCadSair.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pbxCadSair.BackgroundImage = global::flexnit.Properties.Resources.button_vermelho;
+            this.pbxCadSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxCadSair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxCadSair.Location = new System.Drawing.Point(255, 461);
+            this.pbxCadSair.Name = "pbxCadSair";
+            this.pbxCadSair.Size = new System.Drawing.Size(202, 40);
+            this.pbxCadSair.TabIndex = 19;
+            this.pbxCadSair.TabStop = false;
+            this.pbxCadSair.Click += new System.EventHandler(this.pbxCadSair_Click);
+            // 
             // frmCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 513);
+            this.Controls.Add(this.lblCadSair);
+            this.Controls.Add(this.pbxCadSair);
             this.Controls.Add(this.btnCadCadastrar);
             this.Controls.Add(this.lblCadastrar);
             this.Controls.Add(this.pbxCadastrar);
@@ -317,6 +349,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxCadPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCadConfirmPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCadastrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCadSair)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -340,5 +373,7 @@
         private System.Windows.Forms.PictureBox pbxCadastrar;
         private System.Windows.Forms.Label lblCadastrar;
         private System.Windows.Forms.Button btnCadCadastrar;
+        private System.Windows.Forms.Label lblCadSair;
+        private System.Windows.Forms.PictureBox pbxCadSair;
     }
 }
